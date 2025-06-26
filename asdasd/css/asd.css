@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: white;
+  text-align: center;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+}
+
+.slide {
+  display: none;
+  animation: fade 1.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.caption {
+  color: #ffdfdf;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 0;
+  border-radius: 0 0 15px 15px;
+}
+
+.dots {
+  margin-top: 10px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #ff69b4;
+}
+
+@keyframes fade {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 320px; /* Adjust width as needed */
+  margin: 30px auto; /* Top & bottom space + center alignment */
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+}
+
+.slide img {
+  width: 100%; /* Keeps image within container’s new size */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+
+.fade-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background: #ff69b4;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 2s ease forwards 5s; /* fades in after 5 sec */
+  transition: background 0.3s ease;
+}
+
+.fade-btn:hover {
+  background: #ff85c1;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#backgroundMusic {
+  opacity: 0;
+  transition: opacity 3s ease-in;
+}
+
+
